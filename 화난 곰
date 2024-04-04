@@ -1,0 +1,47 @@
+void setup(){
+ float x,y,d;
+x=250;
+y=250;
+d=100;
+
+size (500,500);  
+
+noStroke();  // 귀
+fill(255,255,255);
+ellipse(x-0.7*d,y-110,60,70);  // 왼
+ellipse(x+0.7*d,y-110,60,70);  // 오
+
+fill(0);  // 귀 안
+ellipse(x-0.7*d,y-110,30,40);  // 왼
+ellipse(x+0.7*d,y-110,30,40);  // 오
+
+noStroke();
+fill(255,255,255);
+ellipse(x,y,d*3,d*2+50);  // 얼굴
+
+fill(0);
+ellipse(x-0.23*d,y+0.4*d,0.15*d,d/10); // 왼 눈
+ellipse(x+0.27*d,y+0.4*d,0.15*d,d/10); // 오른 눈
+
+stroke(0);
+strokeWeight(3);  // 미간 주름 왼쪽부터
+line(x-5,y+0.45*d,x-0.15*d,y+0.2*d);
+strokeWeight(3);
+line(x,y+0.41*d,x-3,y+0.3*d);
+strokeWeight(3);
+line(x+5,y+0.43*d,x+8,y+0.25*d);
+strokeWeight(3);
+line(x+0.1*d,y+0.45*d,x+0.2*d,y+0.2*d);
+
+strokeWeight(3);  // 턱 주름
+line(x-3,y+0.75*d,x-1,y+0.67*d);
+strokeWeight(3);
+line(x+3,y+0.72*d,x+2,y+0.67*d);
+
+triangle(x-5, y+0.55*d, x, y+0.6*d, x+5, y+0.55*d);  //코
+
+strokeWeight(3);  // 오른 입
+line(x+0.1*d,y+0.7*d,x,y+0.6*d);
+strokeWeight(3);  // 왼 입
+line(x-0.1*d,y+0.7*d,x,y+0.6*d);
+}
