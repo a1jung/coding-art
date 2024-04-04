@@ -1,0 +1,68 @@
+void setup(){
+  size(700,600);
+
+fill(204,187,215);
+noStroke();
+
+arc(150, 430, 150, 100, 0, PI+QUARTER_PI, OPEN);
+arc(330, 400, 300, 200, 0, PI, OPEN);
+arc(510, 420, 130, 120, PI+3*QUARTER_PI, TWO_PI+PI);
+
+triangle(350,190,450,450,565,390);
+triangle(300,200,90,400,150,410);
+
+ellipse(180,250,120,90);   // 팔 두짝
+ellipse(460,270,150,90);
+
+quad(200, 210, 450, 200, 550, 400, 100, 430); // 몸통
+
+ellipse(337,210,230,130);  // 얼굴 가운데
+
+ellipse(290,190,115,110);  // 머리 두덩이
+ellipse(380,180,120,100);
+
+fill(0);   // 눈 두덩이
+circle(360,220,7);
+circle(280,210,7);
+
+stroke(204,187,215);   // 왼 얼굴 옆 라인
+noFill();
+strokeWeight(30);
+beginShape();
+vertex(270, 158);
+quadraticVertex(220, 210, 160, 225);
+endShape();
+
+stroke(204,187,215);   // 왼 옆구리 라인
+noFill();
+strokeWeight(30);
+beginShape();
+vertex(200, 310);
+quadraticVertex(45, 430, 110, 440);
+endShape();
+
+
+stroke(0);  // 입 1
+noFill();
+strokeWeight(13);
+beginShape();
+vertex(370, 245);
+quadraticVertex(310, 260, 260, 230);
+endShape();
+
+stroke(165,125,116);  // 입 2
+noFill();
+strokeWeight(8);
+beginShape();
+vertex(370, 245);
+quadraticVertex(310, 260, 260, 230);
+endShape();
+
+stroke(201,176,164);  // 입 3
+noFill();
+strokeWeight(7);
+beginShape();
+vertex(340, 250);
+quadraticVertex(310, 252, 280, 240);
+endShape();
+}
